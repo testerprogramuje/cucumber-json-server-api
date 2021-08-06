@@ -32,4 +32,10 @@ public class ReadEmployeeSteps {
         EmployeeResponse createEmployeeResponse = context.getEmployeeResponse();
         assertThat(allEmployeesAfterCreate).contains(createEmployeeResponse);
     }
+
+    @Then("I should not see deleted employee on employees list")
+    public void i_should_not_see_deleted_employee_on_employees_list() {
+        List<EmployeeResponse> allEmployeesAfterDelete = readEmployeeRequest.readAllEmployees();
+        assertThat(allEmployeesAfterDelete).doesNotContain(context.getEmployeeResponse());
+    }
 }

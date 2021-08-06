@@ -9,4 +9,12 @@ public class JsonServerUrl {
     public static final String BASE_URL = "http://localhost:3000/";
     public static final String EMPLOYEES = "employees/";
     public static final String BUGS = "bugs/";
+
+    public static String getEmployeePath(int employeeId) {
+        return String.format(EMPLOYEES + "%s", employeeId);
+    }
+
+    public static String getBugPath(int bugId) {
+        return String.format(BUGS + "%s", bugId);
+    }
 }
