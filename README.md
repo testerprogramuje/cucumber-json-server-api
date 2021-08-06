@@ -11,6 +11,6 @@ Allure framework is used to generate report from test results - https://github.c
 
 To serve test report on local machine make sure you have run tests using `mvn clean test` command before, then use below command:
 ```  
-allure serve allure-results 
+allure serve target/allure-results 
 ```
 
